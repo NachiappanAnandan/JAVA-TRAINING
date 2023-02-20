@@ -15,9 +15,9 @@ public class ex14Ci {
     // when declared  no modifier it is not considered as entry point of class/
     //will be compiled but unable to run
 
-    // static void main(String[] args) {
-    //     System.out.println("Hello world");
-    // }
+    static void main(String[] args) {
+        System.out.println("Hello world");
+    }
 
 
     

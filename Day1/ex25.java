@@ -6,15 +6,16 @@ public class ex25 {
         d.useD();
 
     }
-    protected class base{//protected class can be declared within a class
-        String Method(){
-            return "Wow";
-        }
-    }
+    
     
     
 }
-class derived extends ex25{ //extended ex25 so protected class can be accessed
+class base{//protected class can be declared within a class
+    String Method(){
+        return "Wow";
+    }
+}
+class derived extends base{ //extended ex25 so protected class can be accessed
     public void useD(){
         base z = new base();
         System.out.println("base says, "+z.Method());
