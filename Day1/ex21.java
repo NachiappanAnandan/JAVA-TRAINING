@@ -21,17 +21,8 @@ public class ex21 {
             int year = sc.nextInt();
 
             // finding leapyear
-            if(year%4==0){
-                if(year%100==0){
-                    if(year%400==0){
-                        System.out.println("29 DAYS");//leap year
-                    }
-                    else{
-                        System.out.println("28 DAYS");//not a leap year
-                    }
-                }  else{
-                    System.out.println("29 DAYS");//leap year
-                }              
+            if(year%4==0 || ((year%100==0) && (year%400==0))){
+                System.out.println("29 DAYS");//leap year             
             }else{
                 System.out.println("28 Days");//not a leap year
             }

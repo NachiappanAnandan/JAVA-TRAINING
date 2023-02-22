@@ -3,7 +3,7 @@ package Day1;
 public class ex2 {
 
 	public static void main(String args[]) {
-		PrimitiveTypes types = new PrimitiveTypes();
+		DefaultValues types = new DefaultValues();
 		types.display();
 		
 	}
@@ -18,7 +18,17 @@ class PrimitiveTypes{
 	double d = 2.4566;
 	char c='n';
 	boolean bol = true;
-	
+}
+class DefaultValues{
+	byte b ;
+	short sh ;
+	int i ;
+	long l ;
+	float f ;
+	double d ;
+	char c;
+	boolean bol ;
+
 	public void display() {
 		System.out.println("byte value = "+ b);
 		System.out.println("short value = "+ sh);

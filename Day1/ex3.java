@@ -47,6 +47,7 @@ public class ex3 {
 		System.out.println("EXPLICIT Type casting long to float = "+(float)values.l);
 		System.out.println("EXPLICIT Type casting float to double = "+(double)values.l);
 		System.out.println("EXPLICIT Type casting char to int = "+(int)values.c);
+		System.out.println("EXPLICIT Type casting short to byte = "+(byte)values.sh);
 		
 		
 		
