@@ -5,7 +5,11 @@ public class ex16 {
         X x1 = new X();
         X x2 = new Y(); 
         Y y1  = new Y();
-        (Y)x2.do2();
+        ((Y)x2).do2();
+
+        // x1.do1();
+        // x2.do1();
+
     }
 }
 
