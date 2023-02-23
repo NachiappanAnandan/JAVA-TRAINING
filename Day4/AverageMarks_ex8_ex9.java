@@ -18,7 +18,7 @@ public class AverageMarks_ex8_ex9 {
                 checkConstraint(mark);
                 total+=mark;
                 ++i;
-            }catch(InputMismatchException e){
+            }catch(InputMismatchException e){//input mismatch exception
                 sc.next();
                 System.out.println("Enter a valid Value...");
             }catch(MyException Me){
