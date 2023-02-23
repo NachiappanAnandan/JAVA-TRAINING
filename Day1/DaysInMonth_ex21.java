@@ -39,6 +39,4 @@ public class DaysInMonth_ex21 {
     sc.close();
     }
     
-
-    
 }

@@ -4,10 +4,10 @@ package Day3;
 
 public class ShapesInterface_ex2 {
     public static void main(String[] args) {
-        Shapes s1 = new Square(4);
-        Shapes s2 = new Sphere(8);
-        Shapes s3 = new Circle(11);
-        Shapes s4 = new Cuboid(16);
+        Shape s1 = new Square(4);
+        Shape s2 = new Sphere(8);
+        Shape s3 = new Circle(11);
+        Shape s4 = new Cuboid(16);
 
         s1.Calculate();//square
         s2.Calculate();//sphere
@@ -43,12 +43,12 @@ interface CalcVolume{
  * Cuboid
  */
 
- abstract class Shapes {
+ abstract class Shape {
     public abstract void Calculate();
  }
 
 
- class Circle extends Shapes implements CalcArea {
+ class Circle extends Shape implements CalcArea {
     int r;
     Circle(int r){
         this.r = r;
@@ -68,7 +68,7 @@ interface CalcVolume{
     }
  }
 
- class Square extends Shapes implements CalcArea{
+ class Square extends Shape implements CalcArea{
     int a;
     Square(int a){
         this.a = a;
@@ -88,7 +88,7 @@ interface CalcVolume{
  }
 
 
- class Triangle extends Shapes implements CalcArea{
+ class Triangle extends Shape implements CalcArea{
     int a,b,c;
     Triangle(int a, int b, int c){
         this.a = a;
@@ -111,7 +111,7 @@ interface CalcVolume{
  }
 
 
- class Sphere extends Shapes implements CalcArea,CalcVolume{
+ class Sphere extends Shape implements CalcArea,CalcVolume{
     int r;
     Sphere(int r){
         this.r=r;
@@ -139,7 +139,7 @@ interface CalcVolume{
  }
 
 
- class Cuboid extends Shapes implements CalcArea,CalcVolume{
+ class Cuboid extends Shape implements CalcArea,CalcVolume{
     int a;
     Cuboid(int a){
         this.a =a;

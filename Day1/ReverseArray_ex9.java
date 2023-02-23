@@ -2,6 +2,10 @@ package Day1;
 //reverse an array
 
 public class ReverseArray_ex9 {
+
+		static{
+			System.out.println("Static block...");
+		}
 	public static void main(String[] args) {
 			int arr[] = {45,78,9,12,1};
 			
@@ -11,7 +15,11 @@ public class ReverseArray_ex9 {
 		}
 			
 	}
+	// static{
+	// 	System.out.println("Static block...");
+	// }
 	public static void reverseArr(int arr[]){
+
 		int temp , n = arr.length;
 		for (int i = 0; i < n/2; i++) {
 			temp = arr[i];
