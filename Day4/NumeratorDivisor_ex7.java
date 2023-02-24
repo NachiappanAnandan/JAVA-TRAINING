@@ -53,7 +53,7 @@ public static void main(String[] args)  {
 //Method for checking q
 static void CheckQ(String Numerator){
     char Q = Numerator.charAt(0);
-    if(Q =='q'|| Q=='q'){
+    if(Q =='q'|| Q=='Q'){
         System.exit(0);
     }
 }

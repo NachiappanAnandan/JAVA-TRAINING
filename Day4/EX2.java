@@ -1,7 +1,7 @@
 package Day4;
 
 
-class EX2{
+class Ex2{
     public void mth1(){
         mth2();
         System.out.println("caller");
@@ -24,7 +24,7 @@ class EX2{
     }
     public static void main(String[] args) {
         {
-            EX2 ex = new EX2();
+            Ex2 ex = new Ex2();
             ex.mth1();
         }
     }

@@ -13,9 +13,9 @@ public class IOException_ex1 {
 class DemoException  {
 
     public void ReadFile(String S) throws Exception{
-        try {
+//        try {
             FileReader f = new FileReader(S);
-        }finally{}
+//        }finally{}
     }
     
 }

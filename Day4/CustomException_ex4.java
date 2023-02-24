@@ -9,7 +9,7 @@ public class CustomException_ex4 {
         Scanner sc = new Scanner(System.in);
         number = sc.nextInt();
         try {
-            if(number>100){
+            if(number>100|| number <0){
                 throw new MyException("Number not in the range");
             }
             
@@ -20,6 +20,7 @@ public class CustomException_ex4 {
         sc.close();
     }
 }
+
 
 
 //user Defined Exception
