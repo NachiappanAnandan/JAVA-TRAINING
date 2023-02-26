@@ -1,4 +1,4 @@
-package stringBuffer;
+package stringBuffer_ex8;
 
 public class StringBufferThread extends Thread {
 	

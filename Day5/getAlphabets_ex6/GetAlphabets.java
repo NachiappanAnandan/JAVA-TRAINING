@@ -1,4 +1,4 @@
-package getAlphabets;
+package getAlphabets_ex6;
 
 import java.util.Scanner;
 import java.util.concurrent.ExecutorService;

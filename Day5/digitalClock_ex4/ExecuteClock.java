@@ -1,4 +1,4 @@
-package digitalClock;
+package digitalClock_ex4;
 
 public class ExecuteClock {
 	int hours = 0;

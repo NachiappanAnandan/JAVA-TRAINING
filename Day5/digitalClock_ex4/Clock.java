@@ -1,4 +1,4 @@
-package digitalClock;
+package digitalClock_ex4;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

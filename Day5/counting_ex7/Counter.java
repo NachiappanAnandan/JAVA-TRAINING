@@ -1,4 +1,4 @@
-package Counting;
+package counting_ex7;
 
 public class Counter {
 	

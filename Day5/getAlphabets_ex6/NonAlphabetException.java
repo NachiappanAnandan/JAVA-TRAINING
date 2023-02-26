@@ -1,4 +1,4 @@
-package getAlphabets;
+package getAlphabets_ex6;
 
 public class NonAlphabetException extends Exception {
 	String Message;

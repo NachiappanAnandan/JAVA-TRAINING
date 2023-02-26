@@ -1,4 +1,4 @@
-package evenOdd_ex2;
+package evenOdd_ex1;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
