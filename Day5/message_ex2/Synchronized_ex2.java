@@ -30,7 +30,7 @@ public static void main(String[] args) {
 }
 synchronized public static void printMesssage(String s) {
 	
-	System.out.println("[ ----- "+s+"------ ]");
+	System.out.println("[ ------ "+s+"------ ]");
 	
 }
 }

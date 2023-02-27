@@ -3,7 +3,13 @@ package digitalClock_ex4;
 public class ExecuteClock {
 	int hours = 0;
 	int minutes=0;
-	int seconds = 1;
+	int seconds = 0;
+
+	ExecuteClock(int hour, int minute, int second){
+		this.hours = hour;
+		this.minutes = minute;
+		this.seconds = second;
+	}
 	
 	
 //	setting hours
