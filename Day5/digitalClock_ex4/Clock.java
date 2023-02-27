@@ -41,8 +41,6 @@ public class Clock {
 		Executor.execute(()->{
 			while(true) {
 				Clock.setHours();
-				
-//				System.out.println("hours");
 			}
 			
 		});

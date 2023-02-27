@@ -8,12 +8,14 @@ public class Inventory {
 			try {
 				wait();
 			}catch(Exception e) {}
+		}else{
+			System.out.println("Item is produced");
+			this.item =1;
+			System.out.println("The item count is " +item);
+			notify();
 		}
 			
-			System.out.println("Item is produced");
-			System.out.println("The item count is " +item);
-			this.item =1;
-			notify();
+			
 			
 		}
 	 
@@ -24,13 +26,14 @@ public class Inventory {
 				try {
 					wait();
 				}catch(Exception e) {}
+			}else{
+				System.out.println("Item is Consumed");
+				this.item =0;
+				System.out.println("The item count is " +item);
+				notify();
 			}
 		
-			System.out.println("Item is Consumed");
-			System.out.println("The item count is " +item);
-			this.item =0;
 			
-			notify();
 	
 	}
 }

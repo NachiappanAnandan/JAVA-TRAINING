@@ -13,7 +13,7 @@ public class ExecuteClock {
 	
 	
 //	setting hours
-	 void setHours() {
+synchronized void setHours() {
 		if(minutes==60 && hours<24) {// adding each hour for every 60 th minute till 24th hour
 			minutes=0;
 			hours+=1;
@@ -22,7 +22,7 @@ public class ExecuteClock {
 			hours =0;
 			 try {
 				notify();
-				Thread.sleep(0);// making minutes wait
+				wait();// making minutes wait
 					
 				 }catch(Exception e) {}
 		}
@@ -30,7 +30,7 @@ public class ExecuteClock {
 	}
 	
 //	seting minutes
-	  public void setMinutes() {
+synchronized public void setMinutes() {
 //		 System.out.println(seconds);
 		 if(seconds ==60 && minutes<60) {// adding each minute for every 60 th second till 59 th minute
 			 minutes+=1;
@@ -39,7 +39,7 @@ public class ExecuteClock {
 			 
 			 try {
 				notify();
-				Thread.sleep(0);// making minutes wait
+				wait();;// making minutes wait
 				
 			 }catch(Exception e) {}
 			 
@@ -53,7 +53,7 @@ public class ExecuteClock {
 	 
 	 
 //	 setting seconds
-	  public void setSeconds() {
+	 synchronized public void setSeconds() {
 			
 		if(seconds<60) {//printing seconds from 1 to 59 
 			print();//printing clock
@@ -63,7 +63,7 @@ public class ExecuteClock {
 			
 			try {
 				notify();//notify other thread
-				Thread.sleep(0);// make the thread wait
+				wait();// make the thread wait
 				
 				
 				
