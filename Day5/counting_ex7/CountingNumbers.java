@@ -3,6 +3,11 @@ package counting_ex7;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+/**
+ *  @author Nachiappan 
+ *   @version 1.0*//* 
+ * Class to implement two threads for two functions
+ */
 public class CountingNumbers {
 public static void main(String[] args) {
 	ExecutorService Executor = Executors.newFixedThreadPool(2);
@@ -13,8 +18,9 @@ public static void main(String[] args) {
 		counter.countNumbers();
 	});
 	Executor.execute(()->{
-		counter.PrintMsg();
+		counter.printMessage();
 	});
+	Executor.shutdown();
 }
 }
 

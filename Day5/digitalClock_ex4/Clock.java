@@ -3,7 +3,11 @@ package digitalClock_ex4;
 import java.time.LocalDateTime;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-
+/**
+ *  @author Nachiappan 
+ *   @version 1.0*//* 
+ * Class to print a digital clock using threads
+ */
 public class Clock {
 	public static void main(String[] args) {
 		ExecutorService Executor  = Executors.newFixedThreadPool(3);

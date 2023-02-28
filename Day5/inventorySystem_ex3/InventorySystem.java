@@ -2,7 +2,11 @@ package inventorySystem_ex3;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-
+/**
+ *  @author Nachiappan 
+ *   @version 1.0*//* 
+ * Class to initialize a inventory management using threads
+ */
 public class InventorySystem {
 public static void main(String[] args) {
 	ExecutorService Executor =  Executors.newFixedThreadPool(2);
@@ -19,5 +23,6 @@ public static void main(String[] args) {
 			Inventory.consumeItem();
 		}
 	});
+	Executor.shutdown();
 }
 }

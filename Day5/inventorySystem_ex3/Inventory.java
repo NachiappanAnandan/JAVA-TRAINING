@@ -1,5 +1,9 @@
 package inventorySystem_ex3;
-
+/**
+ *  @author Nachiappan 
+ *   @version 1.0*//* 
+ * Class to manage the inventory by simultaneouslyb producing and consuming but maximum 1 item is produced. 
+ */
 public class Inventory {
 	int item =0 ;
 	synchronized  void produceItem() {
@@ -7,10 +11,12 @@ public class Inventory {
 			// wating to be consumed
 			try {
 				wait();
-			}catch(Exception e) {}
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
 		}else{
 			System.out.println("Item is produced");
-			this.item =1;
+			item =1;
 			System.out.println("The item count is " +item);
 			notify();
 		}
@@ -25,10 +31,12 @@ public class Inventory {
 				// wating to be consumed
 				try {
 					wait();
-				}catch(Exception e) {}
+				}catch(Exception e) {
+					e.printStackTrace();
+				}
 			}else{
 				System.out.println("Item is Consumed");
-				this.item =0;
+				item =0;
 				System.out.println("The item count is " +item);
 				notify();
 			}

@@ -3,10 +3,17 @@ package message_ex2;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+
+/**
+ *  @author Nachiappan 
+ *   @version 1.0*//* 
+ * Class to print message with multiple threads  
+ */
+
 public class Synchronized_ex2 {
 public static void main(String[] args) {
 	
-	ExecutorService executor  = Executors.newFixedThreadPool(5);
+	ExecutorService executor  = Executors.newFixedThreadPool(7);
 	
 	executor.execute(()->{
 		printMesssage("Message1");
@@ -26,11 +33,11 @@ public static void main(String[] args) {
 	executor.execute(()->{
 		printMesssage("Message6");
 	});
+
+	executor.shutdown();
 	
 }
 synchronized public static void printMesssage(String s) {
-	
-	System.out.println("[ ------ "+s+"------ ]");
-	
+	System.out.println("[ ------ "+s+"------ ]");	
 }
 }

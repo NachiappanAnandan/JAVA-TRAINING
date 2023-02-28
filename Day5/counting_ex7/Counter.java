@@ -1,5 +1,9 @@
 package counting_ex7;
-
+/**
+ *  @author Nachiappan 
+ *   @version 1.0*//* 
+ * Class to print 1 to 100 and a message
+ */
 public class Counter {
 	
 	int count = 1;
@@ -13,7 +17,9 @@ public class Counter {
 				try {
 					notify();
 					wait();
-				}catch(Exception e) {}
+				}catch(Exception e) {
+					e.printStackTrace();
+				}
 			}
 		}
 		
@@ -21,7 +27,7 @@ public class Counter {
 
 
 
-	synchronized public  void PrintMsg() {
+	synchronized public  void printMessage() {
 		
 		for(;count%10==0;) {
 			System.out.println("Ten Numbers Reached....");
@@ -29,7 +35,9 @@ public class Counter {
 				Thread.sleep(1000);
 				notify();
 				wait();
-			}catch(Exception e) {}
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
 		
 		}
 		

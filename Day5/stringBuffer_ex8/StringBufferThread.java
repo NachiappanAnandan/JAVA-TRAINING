@@ -1,5 +1,9 @@
 package stringBuffer_ex8;
-
+/**
+ *  @author Nachiappan 
+ *   @version 1.0*//* 
+ * Class to print a string buffer starting from A and increment it in every thread 
+ */
 public class StringBufferThread extends Thread {
 	
 	public static void main(String[] args) {
