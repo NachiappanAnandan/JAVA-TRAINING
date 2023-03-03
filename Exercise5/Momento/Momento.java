@@ -5,9 +5,9 @@ public class Momento {
   
     // value holder
    private String state;
-    Momento(String state){
-        this.state = state;
-    }
+   Momento(String state){
+    this.state = state;
+   }
 
 
     //setting to original value

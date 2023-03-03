@@ -4,18 +4,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Originator {
+    String state;
 
-
-     //list for holing the momento objects to history
-     List<Momento> history = new ArrayList<Momento>();
-
-     public void addToHistory(Momento momento){
-        history.add(momento);
+    public String getState() {
+        return state;
+    }
+    public void setState(String state) {
+        this.state = state;
     }
 
-    //getting using index number
-
-    public Momento getFromHistory(int index){
-        return history.get(index);
+    public Momento AlterMomento(){
+        return new Momento(state);
     }
+    
+    public Momento getStateFromMomento(Momento momento){
+        state = momento.getState();
+        return momento;
+    }
+
 }

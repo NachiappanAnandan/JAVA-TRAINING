@@ -6,7 +6,7 @@ public class Developer implements Emoloyee {
     private String skill;
     
     public Developer() {
-      JOB = "Fix the issue";
+      JOB = "Develop the Software";
     }
     
     @Override
