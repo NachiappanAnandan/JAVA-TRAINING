@@ -12,6 +12,7 @@ public class UserChoice {
 		
 		Transport transportMode = ChooseTransport.transportSelector(Choice);
 		transportMode.ShowRoute();
+		
 		scanner.close();
 	
 	}
