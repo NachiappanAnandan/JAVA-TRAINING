@@ -11,7 +11,7 @@ public class UserChoice {
 		String Choice = scanner.next();
 		
 		Transport transportMode = ChooseTransport.transportSelector(Choice);
-		
+		transportMode.ShowRoute();
 		scanner.close();
 	
 	}

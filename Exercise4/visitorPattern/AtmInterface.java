@@ -24,6 +24,8 @@ public class AtmInterface {
 			e.displayWarning();
 			
 		}
+
+		scanner.close();
 	
 	}
 }
