@@ -8,17 +8,18 @@ import java.time.LocalTime;
 import java.time.ZoneId;
 import java.util.Calendar;
 
-
+import javax.naming.spi.DirStateFactory.Result;
 
 public class Calculate {
 
     double timeTakeninMins;
     LocalDateTime start;
     LocalDateTime result;
+    LocalTime reset ;
 
 
     //values to calculate days count
-     int daysCount=1;
+     int daysCount=0;
     double remainingTime=0;
 
 
@@ -51,20 +52,47 @@ public class Calculate {
     //determine the number of days and last day time
     public  void timeTaken(double totalTime  , LocalDateTime start){
         
-        long remaingMinutes = subtractTime(start);
+        long Day1Time = subtractTime(start);
         // System.out.println("Day 1 minutes :"+remaingMinutes);
         
             //Day1
-            if(remaingMinutes<=480){
-                totalTime-=remaingMinutes;
+            // if(Day1Time<=480){
+            //     if(Day1Time>=totalTime){
+            //         remainingTime=totalTime;
+            //     }else{
+            //         totalTime-=Day1Time;
+            //     }
+            //    }else{
+            //     totalTime-=480;
+            //     daysCount++;
+            //    }
+
+            
+           if(totalTime<=480){//total time less than 8 hrs
+            if(Day1Time>=totalTime){//total time less than day 1 time
+                remainingTime=totalTime;
+                totalTime=0;
+                reset = start.toLocalTime();
+            }else{//total time more than day 1 time
+                totalTime-=Day1Time;
                 daysCount++;
-               }else{
+                reset = LocalTime.of(0,0,0);
+            }
+           }else{//total time greater than 8 hrs
+            if(Day1Time<=480){//day1time less than 8 hrs
+                totalTime-=remainingTime;
+                daysCount++;
+                reset = LocalTime.of(0,0,0);
+            }
+            else{//day1 greater than 8 hrs
                 totalTime-=480;
                 daysCount++;
-               }
+                reset = LocalTime.of(0,0,0);
+            }
+           }
 
 
-
+               System.out.println(totalTime);
                for(;totalTime>0;){
                 if(totalTime>480){
                     totalTime-=480;
@@ -74,7 +102,7 @@ public class Calculate {
                     totalTime-=totalTime;
                 }
                }
-            //    System.out.println(remainingTime);
+               System.out.println(remainingTime);
                
                
     }
@@ -92,28 +120,27 @@ public class Calculate {
     //add days using count and last day minutes
     public  void addDays(){
 
-        LocalTime resetTime = LocalTime.of(0, 0, 0);
+
         int weeknumber = getWeekNumber(start.toLocalDate());//getting week number
        
         for(;daysCount>0;){
 
-
             if((start.getDayOfMonth() == 1 || start.getDayOfMonth() ==26) && (start.getMonthValue()==1 )){
-                // System.out.println(start.toLocalDate()+" holiday");
+                System.out.println(start.toLocalDate()+" holiday");
                 start =start.plusDays(1);
             }else if(start.getDayOfMonth() == 15 && start.getMonthValue()==8 ){
-                // System.out.println(start.toLocalDate()+" holiday");
+                System.out.println(start.toLocalDate()+" holiday");
                start =  start.plusDays(1);
             }else if(start.getDayOfWeek().getValue()==7){
-                // System.out.println("sunday");
+                System.out.println("sunday");
                 start =  start.plusDays(1);
                 weeknumber = getWeekNumber(start.toLocalDate());
             }else if(weeknumber%2==0 && start.getDayOfWeek().getValue()==6){
-                // System.out.println(start.toLocalDate()+" second saturday");
+                System.out.println(start.toLocalDate()+" second saturday");
                 start =  start.plusDays(1);
             }
             else{
-                // System.out.println(start.toLocalDate()+"working");
+                System.out.println(start.toLocalDate()+"working");
                 start =  start.plusDays(1);
                 daysCount--;
             }
@@ -122,8 +149,8 @@ public class Calculate {
             
            
         }
-       resetTime =  resetTime.plusMinutes((long) remainingTime);
-       result = LocalDateTime.of(start.toLocalDate(), resetTime);
+       reset =  reset.plusMinutes((long) remainingTime);
+       result = LocalDateTime.of(start.toLocalDate(), reset);
     }
 
     
