@@ -1,1 +1,0 @@
-The bridge pattern is used to categorize the classes into different hierarchy and to implement a bridge to between two classes to use it on the other class

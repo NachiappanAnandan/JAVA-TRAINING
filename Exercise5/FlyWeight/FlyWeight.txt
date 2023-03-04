@@ -1,3 +1,0 @@
-This design pattern is used when large number of objects is created.
-
-It is used to reduce memory to make sharing of similar objects raher than creating new 
