@@ -1,0 +1,14 @@
+Momento Design Patten
+
+-- Main purpose is to store the values of the object to restore when any modification is done.
+-- The three types of class used
+                    -- Momento
+                    -- Originator
+                    --care taker
+
+
+    Momento -- The basixc alss where the object values is defined.
+    Originator -- Contains the set and get functions to assign current values to the corresponding momento
+    Caretaker -- Conatains previous values for performs storiing and restore.
+
+    
