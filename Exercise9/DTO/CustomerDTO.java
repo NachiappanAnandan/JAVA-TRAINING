@@ -1,0 +1,60 @@
+package DTO;
+
+import java.io.Serializable;
+
+public class CustomerDTO implements Comparable<CustomerDTO> , Serializable{
+	private int id;
+	private String name , address;
+	
+	
+	public CustomerDTO(int id, String name, String address) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.address = address;
+	}
+
+
+	public CustomerDTO() {
+		// TODO Auto-generated constructor stub
+	}
+
+
+	public int getId() {
+		return id;
+	}
+
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+	public String getAddress() {
+		return address;
+	}
+
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+
+	@Override
+	public int compareTo(CustomerDTO o) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+	
+}

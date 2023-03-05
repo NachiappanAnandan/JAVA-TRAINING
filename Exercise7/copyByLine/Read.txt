@@ -1,6 +1,0 @@
-This is read file cosist of multiple lines
-Copied in line format
-line 1
-line 2
-line 3
-line 4
